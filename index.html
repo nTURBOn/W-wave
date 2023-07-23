@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title tabindex="-1">W-Wave</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/nomalize.css">
+  <link rel="stylesheet" href="libs/tabs/graph-tabs.min.css">
+  <link rel="stylesheet" href="libs/choices.min.css">
+  <link rel="stylesheet" href="libs/Accordion.JS-master/accordion.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+  <header class="head">
+    <div class="container">
+      <a tabindex="-1" href="#" class="head__link">
+        <img src="img/logo.svg" alt="Logo" class="head__logo">
+      </a>
+      <div class="head__navigation">
+        <input id="navigation__menu--toggle" type="checkbox"/>
+        <label class="navigation__menu--btn" for="navigation__menu--toggle">
+          <span class="navigation__btn--new"></span>
+        </label>
+        <div class="navigation__menu">
+          <ul class="navigation__menu--first">
+            <li class="navigation__menu--item"><a href="#podcasts" class="head__nav">Подкасты</a></li>
+            <li class="navigation__menu--item"><a href="#broadcast" class="head__nav">Передачи</a></li>
+            <li class="navigation__menu--item"><a href="#guest" class="head__nav">Гости</a></li>
+            <li class="navigation__menu--item"><a href="#playlists" class="head__nav">Плейлисты</a></li>
+            <li class="navigation__menu--item"><a href="#aboutus" class="head__nav head__nav--last">О&nbsp;нас</a></li>
+            <ul class="navigation__menu--second">
+              <li class="navigation__menu--item"><a href="#" class="navigation__link">Новости</a></li>
+              <li class="navigation__menu--item"><a href="#" class="navigation__link">Блоги</a></li>
+              <li class="navigation__menu--item"><a href="#" class="navigation__link">Топы</a></li>
+              <li class="navigation__menu--item"><a href="#" class="navigation__link">Опросы</a></li>
+              <li class="navigation__menu--item"><a href="#" class="navigation__link">Рейтинги</a></li>
+              <li class="navigation__menu--item"><a href="#" class="navigation__link">Реклама</a></li>
+            </ul>
+          </ul>
+        </div>
+        <div class="head__search">
+          <input type="text" placeholder="Поиск по&nbsp;сайту" class="head__search--input">
+          <button class="head__search--button button-reset"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="head__search--circle" d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path class="head__search--stick" d="M20.9999 21L16.6499 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <button class="head__signin button-reset">Вход</button>
+      </div>
+      <div class="head__live">
+        <img class="head__live--img" src="img/head__live--close.svg" alt="Open/close">
+        <button class="button-reset head__live--btn">Что в&nbsp;эфире?</button>
+      </div>
+
+      <div class="head__live--content">
+        <div class="navigation__live2 navigation__live--previously2">
+          <button tabindex="-1" class="navigation__play--first navigation__active--first button-reset">
+            <svg tabindex="0" class="navigation__play--img2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="navigation__play--ico" d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/></svg>
+          </button>
+          <button class="navigation__stop--first button-reset">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/><rect x="9" y="8" width="2" height="8" rx="1" fill="white"/><rect x="13" y="8" width="2" height="8" rx="1" fill="white"/><clipPath id="clip0_24531_3491"><rect width="24" height="24" fill="white"/></svg>
+          </button>
+          <div class="navigation__live--texts">
+            <p class="navigation__live--title2">Ранее в эфире</p>
+            <p class="navigation__live--name2">&laquo;Музыка&raquo;</p>
+          </div>
+        </div>
+        <div class="navigation__live2 navigation__live--now2">
+          <button tabindex="-1" class="navigation__play--second navigation__active--second button-reset">
+            <svg tabindex="0" class="navigation__play--img2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="navigation__play--ico" d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/></svg>
+          </button>
+          <button class="navigation__stop--second button-reset">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/><rect x="9" y="8" width="2" height="8" rx="1" fill="white"/><rect x="13" y="8" width="2" height="8" rx="1" fill="white"/><clipPath id="clip0_24531_3491"><rect width="24" height="24" fill="white"/></svg>
+          </button>
+          <div class="navigation__live--texts">
+            <p class="navigation__live--title2">Сейчас в эфире</p>
+            <p class="navigation__live--name2">&laquo;Как так?&raquo;</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </header>
+  <nav class="navigation">
+    <div class="container">
+        <a href="#" class="navigation__link">Новости</a>
+        <a href="#" class="navigation__link">Блоги</a>
+        <a href="#" class="navigation__link">Топы</a>
+        <a href="#" class="navigation__link">Опросы</a>
+        <a href="#" class="navigation__link">Рейтинги</a>
+        <a href="#" class="navigation__link">Реклама</a>
+      </ul>
+      <div class="navigation__live navigation__live--previously">
+        <button tabindex="-1" class="navigation__play--first navigation__active--first button-reset">
+          <svg tabindex="0" class="navigation__play--img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="navigation__play--ico" d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/></svg>
+        </button>
+        <button class="navigation__stop--first button-reset">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/><rect x="9" y="8" width="2" height="8" rx="1" fill="white"/><rect x="13" y="8" width="2" height="8" rx="1" fill="white"/><clipPath id="clip0_24531_3491"><rect width="24" height="24" fill="white"/></svg>
+        </button>
+        <p class="navigation__live--title">Ранее в эфире</p>
+        <p class="navigation__live--name">&laquo;Музыка&raquo;</p>
+      </div>
+      <div class="navigation__live navigation__live--now">
+        <button tabindex="-1" class="navigation__play--second navigation__active--second button-reset">
+          <svg tabindex="0" class="navigation__play--img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="navigation__play--ico" d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#A1A6B4"/></svg>
+        </button>
+        <button class="navigation__stop--second button-reset">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/><rect x="9" y="8" width="2" height="8" rx="1" fill="white"/><rect x="13" y="8" width="2" height="8" rx="1" fill="white"/><clipPath id="clip0_24531_3491"><rect width="24" height="24" fill="white"/></svg>
+        </button>
+        <p class="navigation__live--title">Сейчас в эфире</p>
+        <p class="navigation__live--name">&laquo;Как так?&raquo;</p>
+      </div>
+      <div class="navigation__agelimit">
+        <p class="navigation__agelimit--text">12+</p>
+      </div>
+    </div>
+  </nav>
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__text">
+          <h1 class="hero__title"><b>Радио</b> W-Wave</h1>
+          <p class="hero__descr">Привет, на связи W-Wave! Раньше мы были изданием, а теперь пробуем себя в разоворном жанре. Говорим о музыке, политике, истории, науке и культуре. Здесь, помимо прямого эфира — архив передач и многое другое:)</p>
+          <button class="hero__btn button-reset">Слушать эфир</button>
+        </div>
+        <img src="img/microphone.png" alt="Microphone" class="hero__img">
+      </div>
+    </section>
+    <section id="podcasts" class="podcasts">
+      <div class="container">
+        <h2 class="podcasts__title">Подкасты</h2>
+        <div class="podcasts__cards">
+          <div class="podcasts__card podcasts__card--first">
+            <p class="podcasts__time">15:43</p>
+            <p class="podcasts__name">Европа. XIX век</p>
+            <p class="podcasts__autor">Дмитрий Гутенберг</p>
+            <div class="podcasts__reactions">
+              <p class="podcasts__reaction podcasts__views">258</p>
+              <p class="podcasts__reaction podcasts__likes">104</p>
+              <p class="podcasts__reaction podcasts__shares">68</p>
+            </div>
+            <p class="podcasts__duration">14 июня</p>
+            <button class="podcasts__play--btn button-reset" data-path="one"><svg class="podcasts__play--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__play--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><path class="podcasts__play--triangle" d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/></svg></button>
+            <button class="podcasts__item button-reset" data-target="one"><svg class="podcasts__item--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__item--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><rect class="podcasts__item--stick" x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/><rect class="podcasts__item--stick" x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/></svg></button>
+          </div>
+          <div class="podcasts__card podcasts__card--second">
+            <p class="podcasts__time">5:32</p>
+            <p class="podcasts__name">О музыке</p>
+            <p class="podcasts__autor">Дмитрий Гутенберг</p>
+            <div class="podcasts__reactions">
+              <p class="podcasts__reaction podcasts__views">207</p>
+              <p class="podcasts__reaction podcasts__likes">34</p>
+              <p class="podcasts__reaction podcasts__shares">18</p>
+            </div>
+            <p class="podcasts__duration">11 июня</p>
+            <button class="podcasts__play--btn button-reset" data-path="two"><svg class="podcasts__play--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__play--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><path class="podcasts__play--triangle" d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/></svg></button>
+            <button class="podcasts__item button-reset" data-target="two"><svg class="podcasts__item--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__item--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><rect class="podcasts__item--stick" x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/><rect class="podcasts__item--stick" x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/></svg></button>
+          </div>
+          <div class="podcasts__card podcasts__card--third">
+            <p class="podcasts__time">8:54</p>
+            <p class="podcasts__name">Люди сегодня</p>
+            <p class="podcasts__autor">Анна Васильева</p>
+            <div class="podcasts__reactions">
+              <p class="podcasts__reaction podcasts__views">104</p>
+              <p class="podcasts__reaction podcasts__likes">54</p>
+              <p class="podcasts__reaction podcasts__shares">42</p>
+            </div>
+            <p class="podcasts__duration">8 июня</p>
+            <button class="podcasts__play--btn button-reset" data-path="three" ><svg class="podcasts__play--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__play--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><path class="podcasts__play--triangle" d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/></svg></button>
+            <button class="podcasts__item button-reset" data-target="three" ><svg class="podcasts__item--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__item--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><rect class="podcasts__item--stick" x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/><rect class="podcasts__item--stick" x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/></svg></button>
+          </div>
+          <div class="podcasts__card podcasts__card--fourth">
+            <p class="podcasts__time">9:04</p>
+            <p class="podcasts__name">Хеллоу, Африка!</p>
+            <p class="podcasts__autor">Пётр Дмитриевский</p>
+            <div class="podcasts__reactions">
+              <p class="podcasts__reaction podcasts__views">87</p>
+              <p class="podcasts__reaction podcasts__likes">44</p>
+              <p class="podcasts__reaction podcasts__shares">5</p>
+            </div>
+            <p class="podcasts__duration">5 июня</p>
+            <button class="podcasts__play--btn button-reset" data-path="four" ><svg class="podcasts__play--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__play--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><path class="podcasts__play--triangle" d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/></svg></button>
+            <button class="podcasts__item button-reset" data-target="four" ><svg class="podcasts__item--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__item--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><rect class="podcasts__item--stick" x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/><rect class="podcasts__item--stick" x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/></svg></button>
+          </div>
+          <div class="podcasts__card podcasts__card--fifth">
+            <p class="podcasts__time">7:03</p>
+            <p class="podcasts__name">Обо всём</p>
+            <p class="podcasts__autor">Пётр Дмитриевский</p>
+            <div class="podcasts__reactions">
+              <p class="podcasts__reaction podcasts__views">64</p>
+              <p class="podcasts__reaction podcasts__likes">30</p>
+              <p class="podcasts__reaction podcasts__shares">8</p>
+            </div>
+            <p class="podcasts__duration">2 июня</p>
+            <button class="podcasts__play--btn button-reset" data-path="five" ><svg class="podcasts__play--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__play--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><path class="podcasts__play--triangle" d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/></svg></button>
+            <button class="podcasts__item button-reset" data-target="five" ><svg class="podcasts__item--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__item--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><rect class="podcasts__item--stick" x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/><rect class="podcasts__item--stick" x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/></svg></button>
+          </div>
+          <div class="podcasts__card podcasts__card--sixth">
+            <p class="podcasts__time">9:15</p>
+            <p class="podcasts__name">Физика цвета</p>
+            <p class="podcasts__autor">Татьяна Флеганова</p>
+            <div class="podcasts__reactions">
+              <p class="podcasts__reaction podcasts__views">58</p>
+              <p class="podcasts__reaction podcasts__likes">29</p>
+              <p class="podcasts__reaction podcasts__shares">14</p>
+            </div>
+            <p class="podcasts__duration">28 мая</p>
+            <button class="podcasts__play--btn button-reset" data-path="six" ><svg class="podcasts__play--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__play--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><path class="podcasts__play--triangle" d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/></svg></button>
+            <button class="podcasts__item button-reset" data-target="six" ><svg class="podcasts__item--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__item--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><rect class="podcasts__item--stick" x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/><rect class="podcasts__item--stick" x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/></svg></button>
+          </div>
+          <div class="podcasts__card podcasts__card--seventh">
+            <p class="podcasts__time">16:04</p>
+            <p class="podcasts__name">Источник звука</p>
+            <p class="podcasts__autor">Пётр Дмитриевский</p>
+            <div class="podcasts__reactions">
+              <p class="podcasts__reaction podcasts__views">55</p>
+              <p class="podcasts__reaction podcasts__likes">20</p>
+              <p class="podcasts__reaction podcasts__shares">12</p>
+            </div>
+            <p class="podcasts__duration">22 мая</p>
+            <button class="podcasts__play--btn button-reset" data-path="seven" ><svg class="podcasts__play--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__play--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><path class="podcasts__play--triangle" d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/></svg></button>
+            <button class="podcasts__item button-reset" data-target="seven" ><svg class="podcasts__item--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__item--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><rect class="podcasts__item--stick" x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/><rect class="podcasts__item--stick" x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/></svg></button>
+          </div>
+          <div class="podcasts__card podcasts__card--eighth">
+            <p class="podcasts__time">6:55</p>
+            <p class="podcasts__name">Правила этикета</p>
+            <p class="podcasts__autor">Татьяна Флеганова</p>
+            <div class="podcasts__reactions">
+              <p class="podcasts__reaction podcasts__views">24</p>
+              <p class="podcasts__reaction podcasts__likes">54</p>
+              <p class="podcasts__reaction podcasts__shares">42</p>
+            </div>
+            <p class="podcasts__duration">14 июня</p>
+            <button class="podcasts__play--btn button-reset" data-path="eight" ><svg class="podcasts__play--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__play--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><path class="podcasts__play--triangle" d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/></svg></button>
+            <button class="podcasts__item button-reset" data-target="eight" ><svg class="podcasts__item--img" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="podcasts__item--circle" cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/><rect class="podcasts__item--stick" x="19" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/><rect class="podcasts__item--stick" x="27" y="15" width="2" height="18" rx="1" fill="#A1A6B4"/></svg></button>
+          </div>
+          <button class="podcastst__more--btn button-reset">Ещё подкасты</button>
+        </div>
+      </div>
+    </section>
+    <section id="broadcast" class="broadcast">
+      <div class="container">
+        <div class="broadcast__autor--all">
+          <h2 class="broadcast__title">Передачи</h2>
+          <p class="broadcast__autor--text">Автор:</p>
+          <select name="autor" id="material" class="broadcast__autor--select">
+            <option class="select-option" value="Дмитрий Гутенберг">Дмитрий Гутенберг</option>
+            <option class="select-option" value="Татьяна Флеганова">Татьяна Флеганова</option>
+            <option class="select-option" value="Анна Васильева">Анна Васильева</option>
+            <option class="select-option" value="Пётр Дмитриевский">Пётр Дмитриевский</option>
+          </select>
+          <picture class="broadcast__img--mic">
+            <source media="(max-width: 1920px)" srcset="img/mic.png">
+            <img src="img/mic.png" alt="Decorative picture">
+          </picture>
+          <button class="broadcast__btn--archive button-reset">Архив</button>
+          <p class="broadcast__descr">В&nbsp;архив попадают все передачи, которые вы&nbsp;пропустили! Enjoy:)</p>
+        </div>
+        <div class="broadcast__cards">
+          <div tabindex="0" class="broadcast__card broadcast__card--first">
+            <h3 class="broadcast__card--title">О&nbsp;людях и&nbsp;книгах</h3>
+            <p class="broadcast__card--descr">Анонсируется отдельно</p>
+            <span class="broadcast__card--buttons">
+              <button tabindex="-1" class="broadcast__card--button button-reset">Подробнее</button>
+              <svg class="broadcast__button--image" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" class="broadcast__card--path" fill="#121723"/></svg>
+            </span>
+          </div>
+          <div tabindex="0" class="broadcast__card broadcast__card--second">
+            <h3 class="broadcast__card--title">Графомания&nbsp;td</h3>
+            <p class="broadcast__card--descr">По&nbsp;понедельникам в&nbsp;10:00</p>
+            <span class="broadcast__card--buttons">
+              <button tabindex="-1" class="broadcast__card--button button-reset">Подробнее</button>
+              <svg class="broadcast__button--image" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" class="broadcast__card--path" fill="#121723"/></svg>
+            </span>
+          </div>
+          <div tabindex="0" class="broadcast__card broadcast__card--third">
+            <h3 class="broadcast__card--title">Не&nbsp;Рим, не&nbsp;Троя</h3>
+            <p class="broadcast__card--descr">По&nbsp;вторникам в&nbsp;12:00</p>
+            <span class="broadcast__card--buttons">
+              <button tabindex="-1" class="broadcast__card--button button-reset">Подробнее</button>
+              <svg class="broadcast__button--image" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" class="broadcast__card--path" fill="#121723"/></svg>
+            </span>
+          </div>
+          <div tabindex="0" class="broadcast__card broadcast__card--fourth">
+            <h3 class="broadcast__card--title">Эрудит</h3>
+            <p class="broadcast__card--descr">По&nbsp;пятницам в&nbsp;17:00</p>
+            <span class="broadcast__card--buttons">
+              <button tabindex="-1" class="broadcast__card--button button-reset">Подробнее</button>
+              <svg class="broadcast__button--image" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" class="broadcast__card--path" fill="#121723"/></svg>
+            </span>
+          </div>
+          <div tabindex="0" class="broadcast__card broadcast__card--fifth">
+            <h3 class="broadcast__card--title">Тонкости эпох</h3>
+            <p class="broadcast__card--descr">По&nbsp;субботам в&nbsp;10:00</p>
+            <span class="broadcast__card--buttons">
+              <button tabindex="-1" class="broadcast__card--button button-reset">Подробнее</button>
+              <svg class="broadcast__button--image" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" class="broadcast__card--path" fill="#121723"/></svg>
+            </span>
+          </div>
+          <div tabindex="0" class="broadcast__card broadcast__card--sixth">
+            <h3 class="broadcast__card--title">Живые мысли</h3>
+            <p class="broadcast__card--descr">По&nbsp;воскресеньям в&nbsp;15:30</p>
+            <span class="broadcast__card--buttons">
+              <button tabindex="-1" class="broadcast__card--button button-reset">Подробнее</button>
+              <svg class="broadcast__button--image" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" class="broadcast__card--path" fill="#121723"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="broadcast__archive--768">
+          <button class="broadcast__btn--archive768 button-reset">Архив</button>
+          <p class="broadcast__descr768">В&nbsp;архив попадают все передачи, которые вы&nbsp;пропустили! Enjoy:)</p>
+        </div>
+      </div>
+    </section>
+    <section id="guest" class="guest">
+      <div class="container">
+        <h2 class="guest__title">Гости</h2>
+        <p class="guest__descr--wehave">У&nbsp;нас бывают:</p>
+        <p class="guest__descr">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!</p>
+        <div class="guest__chooses">
+          <ul id="my-accordion" class="accordionjs">
+            <!-- first -->
+            <li>
+              <div>Блогеры</div>
+                <div class="guest__accordion--buttons">
+                  <div class="tabs" data-tabs="tab">
+                    <ul class="tabs__nav">
+                      <div class="tabs__buttons">
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Сергей Денисов</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Евгений Войновский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Олег Свиридовский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Денис Тельман</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Матвей Мечников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Ольга Мартынова</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Владислав Кауперс</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Юрий Горин</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Константин Прусино</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Дмитрий Михалок</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Михаил Пожитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Максим Сергеев</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Иван Калитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Пётр Пиотровский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Георгий Полуян</button></li>
+                      </div>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <img class="guest__card--img" src="img/guest__card--img.jpg" alt="Ольга Мартынова">
+                          <img class="guest__card--img768" src="img/guest__card--img768.jpg" alt="Ольга Мартынова">
+                          <div class="guest__card--links">
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--instagram.svg" alt="Instagram"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--facebook.svg" alt="Facebook"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--twiter.svg" alt="Twiter"></a>
+                          </div>
+                          <p class="guest__card--title">Ольга Мартынова</p>
+                          <p class="guest__card--descr">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.</p>
+                          <button class="guest__card--btn button-reset">Эфиры с гостем</button>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <svg class="tabs__pic" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="tabs__pic--circle" cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                <path class="tabs__pic--arrow" d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </li>
+            <!-- second -->
+            <li>
+              <div>Арт-критики</div>
+                <div class="guest__accordion--buttons">
+                  <div class="tabs" data-tabs="tab">
+                    <ul class="tabs__nav">
+                      <div class="tabs__buttons">
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Сергей Денисов</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Евгений Войновский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Олег Свиридовский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Денис Тельман</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Матвей Мечников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Ольга Мартынова</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Владислав Кауперс</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Юрий Горин</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Константин Прусино</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Дмитрий Михалок</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Михаил Пожитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Максим Сергеев</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Иван Калитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Пётр Пиотровский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Георгий Полуян</button></li>
+                      </div>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <img class="guest__card--img" src="img/guest__card--img.jpg" alt="Olga Martynova">
+                          <div class="guest__card--links">
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--instagram.svg" alt="Instagram"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--facebook.svg" alt="Facebook"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--twiter.svg" alt="Twiter"></a>
+                          </div>
+                          <p class="guest__card--title">Ольга Мартынова</p>
+                          <p class="guest__card--descr">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.</p>
+                          <button class="guest__card--btn button-reset">Эфиры с гостем</button>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <svg class="tabs__pic" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="tabs__pic--circle" cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                <path class="tabs__pic--arrow" d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </li>
+            <!-- third -->
+            <li>
+              <div>Художники</div>
+                <div class="guest__accordion--buttons">
+                  <div class="tabs" data-tabs="tab">
+                    <ul class="tabs__nav">
+                      <div class="tabs__buttons">
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Сергей Денисов</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Евгений Войновский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Олег Свиридовский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Денис Тельман</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Матвей Мечников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Ольга Мартынова</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Владислав Кауперс</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Юрий Горин</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Константин Прусино</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Дмитрий Михалок</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Михаил Пожитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Максим Сергеев</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Иван Калитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Пётр Пиотровский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Георгий Полуян</button></li>
+                      </div>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <img class="guest__card--img" src="img/guest__card--img.jpg" alt="Olga Martynova">
+                          <div class="guest__card--links">
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--instagram.svg" alt="Instagram"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--facebook.svg" alt="Facebook"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--twiter.svg" alt="Twiter"></a>
+                          </div>
+                          <p class="guest__card--title">Ольга Мартынова</p>
+                          <p class="guest__card--descr">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.</p>
+                          <button class="guest__card--btn button-reset">Эфиры с гостем</button>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <svg class="tabs__pic" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="tabs__pic--circle" cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                <path class="tabs__pic--arrow" d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </li>
+            <!-- fourth -->
+            <li>
+              <div>Люди науки</div>
+                <div class="guest__accordion--buttons">
+                  <div class="tabs" data-tabs="tab">
+                    <ul class="tabs__nav">
+                      <div class="tabs__buttons">
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Сергей Денисов</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Евгений Войновский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Олег Свиридовский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Денис Тельман</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Матвей Мечников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Ольга Мартынова</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Владислав Кауперс</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Юрий Горин</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Константин Прусино</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Дмитрий Михалок</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Михаил Пожитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Максим Сергеев</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Иван Калитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Пётр Пиотровский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Георгий Полуян</button></li>
+                      </div>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <img class="guest__card--img" src="img/guest__card--img.jpg" alt="Olga Martynova">
+                          <div class="guest__card--links">
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--instagram.svg" alt="Instagram"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--facebook.svg" alt="Facebook"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--twiter.svg" alt="Twiter"></a>
+                          </div>
+                          <p class="guest__card--title">Ольга Мартынова</p>
+                          <p class="guest__card--descr">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.</p>
+                          <button class="guest__card--btn button-reset">Эфиры с гостем</button>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <svg class="tabs__pic" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="tabs__pic--circle" cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                <path class="tabs__pic--arrow" d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </li>
+            <!-- fifth -->
+            <li>
+              <div>Историки</div>
+                <div class="guest__accordion--buttons">
+                  <div class="tabs" data-tabs="tab">
+                    <ul class="tabs__nav">
+                      <div class="tabs__buttons">
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Сергей Денисов</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Евгений Войновский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Олег Свиридовский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Денис Тельман</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Матвей Мечников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Ольга Мартынова</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Владислав Кауперс</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Юрий Горин</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Константин Прусино</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Дмитрий Михалок</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Михаил Пожитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Максим Сергеев</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Иван Калитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Пётр Пиотровский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Георгий Полуян</button></li>
+                      </div>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <img class="guest__card--img" src="img/guest__card--img.jpg" alt="Olga Martynova">
+                          <div class="guest__card--links">
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--instagram.svg" alt="Instagram"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--facebook.svg" alt="Facebook"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--twiter.svg" alt="Twiter"></a>
+                          </div>
+                          <p class="guest__card--title">Ольга Мартынова</p>
+                          <p class="guest__card--descr">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.</p>
+                          <button class="guest__card--btn button-reset">Эфиры с гостем</button>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <svg class="tabs__pic" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="tabs__pic--circle" cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                <path class="tabs__pic--arrow" d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </li>
+            <!-- sixth -->
+            <li>
+              <div>Филологи</div>
+                <div class="guest__accordion--buttons">
+                  <div class="tabs" data-tabs="tab">
+                    <ul class="tabs__nav">
+                      <div class="tabs__buttons">
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Сергей Денисов</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Евгений Войновский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Олег Свиридовский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Денис Тельман</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Матвей Мечников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Ольга Мартынова</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Владислав Кауперс</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Юрий Горин</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Константин Прусино</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Дмитрий Михалок</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Михаил Пожитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Максим Сергеев</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Иван Калитников</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Пётр Пиотровский</button></li>
+                          <li class="tabs__nav-item tabs__nav-btn"><button class="guest__tabs--btn button-reset" type="button">Георгий Полуян</button></li>
+                      </div>
+                    </ul>
+                    <div class="tabs__content">
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <img class="guest__card--img" src="img/guest__card--img.jpg" alt="Olga Martynova">
+                          <div class="guest__card--links">
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--instagram.svg" alt="Instagram"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--facebook.svg" alt="Facebook"></a>
+                            <a href="#" class="guest__card--link"><img src="img/guest__card--twiter.svg" alt="Twiter"></a>
+                          </div>
+                          <p class="guest__card--title">Ольга Мартынова</p>
+                          <p class="guest__card--descr">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.</p>
+                          <button class="guest__card--btn button-reset">Эфиры с гостем</button>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                        <div class="tabs__panel">
+                          <div class="guest__card--nothing">
+                            <img src="img/guest__card--nothingimg.svg" alt="Human silhouette" class="guest__card--nothingimg">
+                            <p class="guest__card--nothingtext">Тут будет фото гостя</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <svg class="tabs__pic" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="tabs__pic--circle" cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+                <path class="tabs__pic--arrow" d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="playlists" class="playlists">
+      <div class="container">
+        <div class="playlists__choose--leftside">
+          <h2 class="playlists__title">Плейлисты</h2>
+          <p class="playlists__genre">Жанр</p>
+          <form class="playlists__form">
+            <label class="playlists__form--control">
+              <input class="playlists__form--input" type="radio" name="radio" checked/>Постпанк
+            </label>
+            <label class="playlists__form--control">
+              <input class="playlists__form--input" type="radio" name="radio" />Хардкор
+            </label>
+            <label class="playlists__form--control">
+              <input class="playlists__form--input" type="radio" name="radio" />Панк-рок
+            </label>
+            <label class="playlists__form--control">
+              <input class="playlists__form--input" type="radio" name="radio" />Рок
+            </label>
+            <label class="playlists__form--control">
+              <input class="playlists__form--input" type="radio" name="radio" />Прогрессивный рок
+            </label>
+            <label class="playlists__form--control">
+              <input class="playlists__form--input" type="radio" name="radio" />Электронная музыка
+            </label>
+            <label class="playlists__form--control">
+              <input class="playlists__form--input" type="radio" name="radio" />Классическая музыка
+            </label>
+            <label class="playlists__form--control">
+              <input class="playlists__form--input" type="radio" name="radio" />Звуки природы и&nbsp;шум города
+            </label>
+          </form>
+          <div class="playlists__buttons">
+            <button tabindex="-1" class="playlists__button button-reset">Постпанк</button>
+            <button tabindex="-1" class="playlists__button button-reset">Хардкор</button>
+            <button tabindex="-1" class="playlists__button button-reset">Панк-рок</button>
+            <button tabindex="-1" class="playlists__button button-reset">Рок</button>
+            <button tabindex="-1" class="playlists__button button-reset">Прогрессивный рок</button>
+            <button tabindex="-1" class="playlists__button button-reset">Электронная музыка</button>
+            <button tabindex="-1" class="playlists__button button-reset">Классическая музыка</button>
+            <button tabindex="-1" class="playlists__button button-reset">Звуки природы и&nbsp;шум города</button>
+          </div>
+          <div class="plalists__undertext">
+            <p class="playlists__alarm">Раздел &laquo;Плейлисты&raquo; может содержать информацию, не&nbsp;предназначенную для несовершеннолетних</p>
+            <p class="playlists__rights">&copy;&nbsp;2021&nbsp;l W-Wave</p>
+            <p class="playlists__agelimit">18+</p>
+          </div>
+        </div>
+        <div class="playlists__musicians--rightside">
+          <div tabindex="0" class="playlists__card playlists__card--first">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Ploho</p>
+              <p class="playlissts__card--descr">3&nbsp;последних альбома</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--second">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Molchat Doma</p>
+              <p class="playlissts__card--descr">Все песни</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--third">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Motorama</p>
+              <p class="playlissts__card--descr">Все синглы</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--fourth">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Human Tetris</p>
+              <p class="playlissts__card--descr">3&nbsp;последних альбома</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--fifth">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Буерак</p>
+              <p class="playlissts__card--descr">Все&nbsp;EP</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--sixth">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Июльские Дни</p>
+              <p class="playlissts__card--descr">Альбом &laquo;Колокол&raquo;</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--seventh">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Joy Division</p>
+              <p class="playlissts__card--descr">Лучшее за&nbsp;всё время</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--eighth">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">The Cure</p>
+              <p class="playlissts__card--descr">Лучшее за&nbsp;всё время</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--nineth">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">The Smiths</p>
+              <p class="playlissts__card--descr">Период 1984&ndash;198</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--tenth">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">New Order</p>
+              <p class="playlissts__card--descr">Хиты</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--eleventh">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Bauhaus</p>
+              <p class="playlissts__card--descr">Все синглы</p>
+            </div>
+          </div>
+          <div tabindex="0" class="playlists__card playlists__card--twelfth">
+            <div class="playlists__card--text">
+              <p class="playlists__card--title">Gang Of Four</p>
+              <p class="playlissts__card--descr">3&nbsp;последних альбома</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section  class="column">
+      <div class="container">
+        <picture class="column__image">
+          <source media="(max-width: 1920px)" srcset="img/column__image.png">
+          <img class="column__image--width" src="img/column__image.png" alt="Column">
+        </picture>
+        <div class="column__text--rightside">
+          <h2 class="column__title">Будь с&nbsp;нами на&nbsp;одной волне!</h2>
+          <p class="column__descr column__descr--first">Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на&nbsp;то, что мы&nbsp;только начали свой путь радиовещателей, нам хочется, чтобы вы&nbsp;могли как следует нас расслышать:)</p>
+          <p class="column__descr column__descr--second">Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0&nbsp;xm. Тщательный подбор всех делатей, ручная сборка, качественный звук. Пока доступно только 60&nbsp;штук в&nbsp;3&nbsp;цветах, но&nbsp;мы&nbsp;активно трудимся над новыми партиями и&nbsp;дизайном. Спешите приобрести!</p>
+          <p class="column__prise">2&nbsp;800&nbsp;₽</p>
+          <div class="column__button--all">
+            <svg class="column__image--yandexmarket" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_95683_256)"><path d="M10.5 20C16.0228 20 20.5 15.5228 20.5 9.99998C20.5 4.47714 16.0228 0 10.5 0C4.97724 0 0.5 4.47714 0.5 9.99998C0.5 15.5228 4.97724 20 10.5 20Z" class="column__image--circle" fill="#F0D288"/><path d="M17.4383 4.54391L13.7294 3.17676L8.39558 10.8637L8.92665 7.3751L6.02046 5.68219L0.673828 12.1141C0.924147 13.3858 1.41008 14.5718 2.08375 15.6239L5.27361 11.7711L4.09981 16.2962L7.73695 17.6271L13.1407 9.8464L11.9568 14.2958L14.9032 16.0179L20.5579 10.3174C20.5591 10.2534 20.5598 10.1889 20.5598 10.1246C20.5598 8.78258 20.3016 7.50132 19.8328 6.32896L16.548 9.6538L17.4383 4.54391Z" class="column__image--line" fill="#121723"/></g><defs><clipPath id="clip0_95683_256"><rect x="0.5" width="20" height="20" rx="10" fill="white"/></clipPath></defs></svg>
+            <button class="button-reset column__button">Купить на&nbsp;Яндекс.Маркет</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="aboutus" class="aboutus">
+      <div class="container">
+        <div class="aboutus__text--all">
+          <h2 class="aboutus__title">О&nbsp;нас</h2>
+          <p class="aboutus__slogan">Приём-приём! Как слышно? Мы&nbsp;уже в&nbsp;эфире? Отлично, поехали!</p>
+          <p class="aboutus__descr">Друзья, мы&nbsp;будем очень рады, если вы&nbsp;поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы&nbsp;можете поделиться обратной связью о&nbsp;наших предеачах, темах, подборках и&nbsp;вообще обо всём! Это можно сделать либо написав нам в&nbsp;форме ниже, либо кликнув на&nbsp;наши соцсети в&nbsp;подвале сайта. Спасибо! Услышимся!:)</p>
+        </div>
+        <div class="aboutus__swiper">
+          <div class="aboutus__arrow--prev"><img src="img/aboutus__arrow-left.svg" alt="Left arrow"></div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide aboutus__card--first">
+                <p class="aboutus__card--title">Дмитрий Гутенберг</p>
+                <p class="aboutus__card--desrc">Эксперт (ну, почти) по&nbsp;всем вопросам (почти)</p>
+              </div>
+              <div class="swiper-slide aboutus__card--second">
+                <p class="aboutus__card--title">Анна Васильева</p>
+                <p class="aboutus__card--desrc">Как я&nbsp;здесь оказалась? А&nbsp;главное&nbsp;&mdash; зачем?</p>
+              </div>
+              <div class="swiper-slide aboutus__card--third">
+                <p class="aboutus__card--title">Пётр Дмитриевский</p>
+                <p class="aboutus__card--desrc">Господа! Внимание! Благодарю за&nbsp;внимание!</p>
+              </div>
+              <div class="swiper-slide aboutus__card--fourth">
+                <p class="aboutus__card--title">Татьяна Флеганова</p>
+                <p class="aboutus__card--desrc">Одна я&nbsp;в&nbsp;пальто стою красивая, а&nbsp;вокруг...</p>
+              </div>
+              <div class="swiper-slide aboutus__card--fifth">
+                <p class="aboutus__card--title">Фёдор Прокопьев</p>
+                <p class="aboutus__card--desrc">Привет! Я&nbsp;фотограф, музыкант, ведущий</p>
+              </div>
+              <div class="swiper-slide aboutus__card--sixth">
+                <p class="aboutus__card--title">Светлана Кортнева</p>
+                <p class="aboutus__card--desrc">Художник-оформитель. Оформляю</p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutus__arrow--next"><img src="img/aboutus__arrow-right.svg" alt="Left arrow"></div>
+        </div>
+        <div class="aboutus__inputs--all">
+          <form class="aboutus__inputs" action="mail.php" method="post">
+            <label for="comment" class="aboutus__comment--label aboutus__label">
+              <input type="text" name="comment" placeholder="Что скажете?" id="comment" class="aboutus__comment--input">
+            </label>
+            <label for="name" class="aboutus__name--label aboutus__label">
+              <input type="text" name="name" placeholder="Имя" id="name" class="aboutus__name--input">
+            </label>
+            <label for="email" class="aboutus__email--label aboutus__label">
+              <input type="text" name="email" placeholder="Email" id="email" class="aboutus__email--input">
+            </label>
+            <button class="aboutus__input--button button-reset">Отправить</button>
+            <div class="aboutus__alarm">
+              <input class="aboutus__input--checkbox" type="checkbox" name="checkbox" id="aboutus__checkbox--alarm"/>
+              <p class="aboutus__input--alarm">Согласен на&nbsp;обработку персональных данных</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__topside">
+          <div class="footer__contacts">
+            <a href="#" class="footer__logo--link"><img src="img/footer__logo.svg" alt="Logo" class="footer__logo"></a>
+            <div class="footer__social--links">
+              <a href="#" class="footer__social--link footer__youtube--link"><svg class="footer__youtube" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_24531_5372)"><path d="M21.543 6.498C22 8.28 22 12 22 12C22 12 22 15.72 21.543 17.502C21.289 18.487 20.546 19.262 19.605 19.524C17.896 20 12 20 12 20C12 20 6.107 20 4.395 19.524C3.45 19.258 2.708 18.484 2.457 17.502C2 15.72 2 12 2 12C2 12 2 8.28 2.457 6.498C2.711 5.513 3.454 4.738 4.395 4.476C6.107 4 12 4 12 4C12 4 17.896 4 19.605 4.476C20.55 4.742 21.292 5.516 21.543 6.498ZM10 15.5L16 12L10 8.5V15.5Z" class="footer__youtube--fill" fill="#D2D5DD"/></g><defs><clipPath id="clip0_24531_5372"><rect width="24" height="24" fill="white"/></clipPath></defs></svg></a>
+              <a href="#" class="footer__social--link footer__ok--link"><svg class="footer__ok" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.23378 6.14624C8.23378 7.0928 9.05694 7.86023 10.0724 7.86023C11.088 7.86023 11.9111 7.0928 11.9111 6.14624C11.9111 5.19968 11.088 4.43231 10.0724 4.43231C9.05694 4.43231 8.23378 5.19968 8.23378 6.14624Z" class="footer__ok--fill" fill="#D2D5DD"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C2.68629 0 0 2.68629 0 6V14C0 17.3137 2.68629 20 6 20H14C17.3137 20 20 17.3137 20 14V6C20 2.68629 17.3137 0 14 0H6ZM5.62436 6.14617C5.62436 3.85633 7.61571 2 10.0724 2C12.5292 2 14.5206 3.85633 14.5206 6.14617C14.5206 8.43606 12.5292 10.2925 10.0724 10.2925C7.61571 10.2925 5.62436 8.43606 5.62436 6.14617ZM14.5472 12.4252C14.4907 12.4674 13.4236 13.2535 11.6427 13.5916L14.3307 16.0748C14.8034 16.5147 14.804 17.2285 14.3321 17.6691C13.8602 18.1097 13.0946 18.1104 12.6216 17.6704L10.012 15.3016L7.64177 17.6552C7.4046 17.8846 7.08805 18 6.77109 18C6.46897 18 6.16645 17.8952 5.93169 17.6842C5.45075 17.252 5.43691 16.5384 5.90062 16.0902L8.4519 13.6048C6.62134 13.2746 5.51009 12.468 5.45295 12.4252C4.93171 12.0357 4.84811 11.3262 5.26591 10.8404C5.6839 10.3547 6.44492 10.2767 6.96616 10.6662C6.97719 10.6744 8.13936 11.4883 10.012 11.4895C11.8847 11.4883 13.0228 10.6744 13.0338 10.6662C13.5551 10.2767 14.3163 10.3547 14.7341 10.8404C15.1519 11.3262 15.0683 12.0357 14.5472 12.4252Z" class="footer__ok--fill" fill="#D2D5DD"/></svg></a>
+              <a href="#" class="footer__social--link footer__vk--link"><svg class="footer__vk" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 8C2 4.68652 4.68652 2 8 2H16C19.3135 2 22 4.68652 22 8V16C22 19.3135 19.3135 22 16 22H8C4.68652 22 2 19.3135 2 16V8ZM17.3438 13.4473C17.7139 13.7778 18.0845 14.1089 18.4121 14.4795C18.5415 14.626 18.6665 14.7754 18.7769 14.9346C18.835 15.0181 18.8892 15.104 18.938 15.1934C19.0425 15.3848 19.0439 15.5859 18.9727 15.7383C18.9058 15.8809 18.7754 15.981 18.606 15.9917L16.4209 15.9912C15.8569 16.0356 15.4077 15.8208 15.0293 15.4575C14.7271 15.1675 14.4468 14.8584 14.1558 14.5586C14.0366 14.4355 13.9116 14.3198 13.7622 14.2285C13.5962 14.1265 13.4419 14.0991 13.3086 14.1455C13.2031 14.1821 13.1104 14.2656 13.0352 14.3955C12.8613 14.6938 12.8213 15.0244 12.8047 15.3564C12.7812 15.8418 12.6255 15.9688 12.1089 15.9917C11.0044 16.0405 9.95654 15.8823 8.98242 15.3574C8.12305 14.8945 7.45801 14.2417 6.87842 13.502C5.75 12.0601 4.88574 10.4775 4.10938 8.84912C3.93457 8.48242 4.0625 8.28662 4.4917 8.27881C5.20459 8.26611 5.91797 8.26758 6.63086 8.27832C6.9209 8.28271 7.11279 8.43896 7.22461 8.69727C7.60986 9.59082 8.08203 10.4409 8.67432 11.229L8.78369 11.3721C8.90918 11.5317 9.04541 11.6826 9.22217 11.7969C9.4751 11.9604 9.66797 11.9062 9.7876 11.6401C9.86377 11.4707 9.89697 11.2896 9.91357 11.1084C9.97021 10.4873 9.97705 9.86621 9.87891 9.24756C9.81787 8.86035 9.58643 8.61035 9.17725 8.53711C8.96826 8.49951 8.99902 8.42676 9.10059 8.31445C9.27637 8.12061 9.44141 8.00049 9.771 8.00049L12.2397 8C12.6284 8.07178 12.7158 8.23633 12.7686 8.60596L12.771 11.1909C12.7661 11.334 12.8472 11.7578 13.1191 11.8511C13.3374 11.9189 13.4814 11.7539 13.6118 11.624C14.2036 11.0317 14.6255 10.333 15.0034 9.60986C15.1699 9.29102 15.314 8.96094 15.4536 8.63037C15.5024 8.51562 15.5635 8.42822 15.6455 8.36816C15.7378 8.30029 15.8564 8.26758 16.0117 8.26953L18.3887 8.27246C18.4585 8.27246 18.5298 8.27295 18.5991 8.28418C18.8101 8.31836 18.9404 8.37939 18.9985 8.4834C19.0503 8.57666 19.0439 8.70508 18.9854 8.87939C18.7979 9.43555 18.4399 9.90283 18.0835 10.3677L18.041 10.4233C17.6436 10.9409 17.2202 11.4399 16.8271 11.96C16.4658 12.4346 16.4941 12.6738 16.9429 13.0864C17.0752 13.208 17.2095 13.3276 17.3438 13.4473Z" class="footer__vk--fill" fill="#D2D5DD"/></svg></a>
+            </div>
+          </div>
+          <div class="footer__page--all">
+            <ul class="footer__list">
+              <li class="footer__list--item"><a href="#podcasts" class="footer__link">Подкасты</a></li>
+              <li class="footer__list--item"><a href="#playlists" class="footer__link">Плейлисты</a></li>
+              <li class="footer__list--item"><a href="#" class="footer__link"> Новости</a></li>
+              <li class="footer__list--item"><a href="#broadcast" class="footer__link">Передачи</a></li>
+              <li class="footer__list--item"><a href="#" class="footer__link">Сетка</a></li>
+              <li class="footer__list--item"><a href="#" class="footer__link">Блоги</a></li>
+              <li class="footer__list--item"><a href="#guest" class="footer__link">Гости</a></li>
+              <li class="footer__list--item"><a href="#aboutus" class="footer__link">О&nbsp;нас</a></li>
+              <li class="footer__list--item"><a href="#" class="footer__link">Топы</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__rights">W-WAVE <sup class="reg">&reg;</sup> 2021</p>
+      </div>
+    </footer>
+  </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="libs/tabs/graph-tabs.min.js"></script>
+<script src="libs/Accordion.JS-master/accordion.min.js"></script>
+<script src="libs/choices.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
