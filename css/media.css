@@ -2412,6 +2412,7 @@
 
   .footer__page--all {
     background-color: #121723;
+    width: 100vw;
   }
 
   .footer__youtube {
@@ -2493,6 +2494,14 @@
   }
 
   .aboutus__arrow--next {
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .aboutus__arrow--prev {
     visibility: hidden;
     overflow: hidden;
     opacity: 0;
