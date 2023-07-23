@@ -1944,6 +1944,10 @@
     padding-bottom: 208px;
   }
 
+  .playlists .container {
+    overflow-x: clip;
+  }
+
   .playlists__title {
     margin-bottom: 19px;
     color: #121723;
