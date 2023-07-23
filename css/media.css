@@ -147,6 +147,19 @@
     margin-right: 30px;
   }
 
+  .broadcast__card--buttons::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: calc(100% + -9px);
+    height: calc(100% + 2px);
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    z-index: -2;
+  }
+
   /* GUEST */
 
   .guest {
